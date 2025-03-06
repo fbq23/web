@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>博客 - 技术分享与成长</title>
+    <link rel="stylesheet" href="../src/index.css">
+    <link rel="stylesheet" href="../src/css/blog.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <header>
+        <nav class="navbar">
+            <div class="nav-right">
+                <a href="index.html">主页</a>
+                <a href="projects.html">项目</a>
+                <a href="experience.html">经验</a>
+                <a href="contact.html">联系</a>
+                <a href="blog.html" class="active">博客</a>
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="ri-sun-line"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 主要内容区 -->
+    <main class="blog-page">
+        <!-- 博客头部 -->
+        <section class="blog-header">
+            <h1 class="section-title">技术分享与成长</h1>
+            <p class="intro-text">记录学习历程，分享技术心得，与你一起在编程的道路上不断进步</p>
+        </section>
+
+        <!-- 博客内容 -->
+        <div class="blog-container">
+            <!-- 主要内容区 -->
+            <section class="blog-content">
+                <h2>我的技术博客</h2>
+                <p class="content-intro">
+                    从最初接触编程到现在，每一步的成长都离不开持续学习和实践。在这里，我记录下自己的学习心得、技术积累和项目经验，希望能够帮助到同样热爱编程的你。
+                </p>
+
+                <!-- 博客分类 -->
+                <div class="blog-categories">
+                    <h3>内容分类</h3>
+                    <div class="category-grid">
+                        <div class="category-card">
+                            <i class="ri-code-box-line"></i>
+                            <h4>编程基础</h4>
+                            <p>Python、JavaScript等编程语言基础知识和实践技巧</p>
+                        </div>
+                        <div class="category-card">
+                            <i class="ri-window-line"></i>
+                            <h4>Web开发</h4>
+                            <p>前端技术、后端框架、数据库设计等全栈开发经验</p>
+                        </div>
+                        <div class="category-card">
+                            <i class="ri-database-2-line"></i>
+                            <h4>数据处理</h4>
+                            <p>数据分析、爬虫技术、数据可视化等实用技能</p>
+                        </div>
+                        <div class="category-card">
+                            <i class="ri-terminal-box-line"></i>
+                            <h4>开发工具</h4>
+                            <p>常用开发工具、环境配置、效率提升技巧分享</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 未来计划 -->
+                <section class="future-plans">
+                    <h3>未来计划</h3>
+                    <div class="plans-grid">
+                        <div class="plan-item">
+                            <h4>技术深耕</h4>
+                            <p>深入研究Web开发、数据分析等领域，分享更多高质量的技术文章</p>
+                        </div>
+                        <div class="plan-item">
+                            <h4>视频教程</h4>
+                            <p>计划制作编程教学视频，帮助更多人学习编程技术</p>
+                        </div>
+                        <div class="plan-item">
+                            <h4>开源项目</h4>
+                            <p>开发并维护更多实用的开源项目，欢迎社区贡献</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 感谢支持 -->
+                <section class="appreciation">
+                    <h3>感谢有你</h3>
+                    <p>感谢每一位关注和支持我的朋友。你们的鼓励和建议，是我不断前进的动力。</p>
+                    <div class="support-options">
+                        <a href="contact.html" class="support-btn">
+                            <i class="ri-message-3-line"></i>
+                            留言交流
+                        </a>
+                        <a href="#subscribe" class="support-btn">
+                            <i class="ri-mail-send-line"></i>
+                            订阅更新
+                        </a>
+                    </div>
+                </section>
+            </section>
+
+            <!-- 侧边栏 -->
+            <aside class="blog-sidebar">
+                <!-- 作者信息 -->
+                <div class="author-card">
+                    <img src="../imgs/03.jpg" alt="作者头像" class="author-avatar">
+                    <h3>小方</h3>
+                    <p>热爱编程，乐于分享的开发者</p>
+                    <div class="author-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">50+</span>
+                            <span class="stat-label">技术文章</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">10+</span>
+                            <span class="stat-label">开源项目</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 订阅区域 -->
+                <div class="subscribe-card" id="subscribe">
+                    <h3>订阅更新</h3>
+                    <p>第一时间获取最新文章和项目动态</p>
+                    <form class="subscribe-form">
+                        <input type="email" placeholder="输入您的邮箱">
+                        <button type="submit">订阅</button>
+                    </form>
+                </div>
+
+                <!-- 推荐资源 -->
+                <div class="resources-card">
+                    <h3>推荐资源</h3>
+                    <ul class="resource-list">
+                        <li>
+                            <i class="ri-book-read-line"></i>
+                            <a href="#">Python编程入门指南</a>
+                        </li>
+                        <li>
+                            <i class="ri-code-box-line"></i>
+                            <a href="#">Web开发最佳实践</a>
+                        </li>
+                        <li>
+                            <i class="ri-database-2-line"></i>
+                            <a href="#">数据分析实战教程</a>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <script>
+        // 订阅表单处理
+        document.querySelector('.subscribe-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('感谢订阅！我们会将最新内容发送到您的邮箱。');
+            this.reset();
+        });
+    </script>
+</body>
+</html> 

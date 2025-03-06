@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>联系我 - 个人博客</title>
+    <link rel="stylesheet" href="../src/index.css">
+    <link rel="stylesheet" href="../src/css/contact.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        (function() {
+            // 初始化 EmailJS，替换为你的 Public Key
+            emailjs.init("YOUR_PUBLIC_KEY");
+        })();
+    </script>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <header>
+        <nav class="navbar">
+            <div class="nav-right">
+                <a href="index.html">主页</a>
+                <a href="projects.html">项目</a>
+                <a href="experience.html">经验</a>
+                <a href="contact.html" class="active">联系</a>
+                <a href="blog.html">博客</a>
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="ri-sun-line"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 主要内容区 -->
+    <main class="contact-page">
+        <section class="contact-header">
+            <h1 class="section-title">联系我</h1>
+            <p class="intro-text">如果你对我的项目、技术文章或任何其他内容有疑问，或者想要探讨合作机会，请随时与我联系。我期待着与你交流！</p>
+        </section>
+
+        <div class="contact-container">
+            <!-- 联系信息 -->
+            <section class="contact-info">
+                <h2>联系方式</h2>
+                <div class="info-cards">
+                    <div class="info-card">
+                        <i class="ri-mail-line"></i>
+                        <h3>邮箱</h3>
+                        <p>3032573683@qq.com</p>
+                        <a href="mailto:3032573683@qq.com" class="contact-link">发送邮件</a>
+                    </div>
+                    <div class="info-card">
+                        <i class="ri-qq-line"></i>
+                        <h3>QQ</h3>
+                        <p>3032573683</p>
+                        <a href="tencent://message/?uin=3032573683" class="contact-link">QQ联系</a>
+                    </div>
+                   
+                </div>
+
+                <div class="response-time">
+                    <i class="ri-time-line"></i>
+                    <p>我通常会在收到消息后的1-2个工作日内回复</p>
+                </div>
+            </section>
+
+            <!-- 联系表单 -->
+            <section class="contact-form">
+                <h2>给我留言</h2>
+                <form id="messageForm">
+                    <div class="form-group">
+                        <label for="name">姓名</label>
+                        <input type="text" id="name" name="name" placeholder="请输入您的姓名（选填）">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">邮箱 <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" required placeholder="请输入您的邮箱地址">
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">主题 <span class="required">*</span></label>
+                        <input type="text" id="subject" name="subject" required placeholder="请输入消息主题">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">消息内容 <span class="required">*</span></label>
+                        <textarea id="message" name="message" required placeholder="请输入您想说的话"></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">发送消息</button>
+                </form>
+            </section>
+        </div>
+
+        <!-- FAQ部分 -->
+        <section class="faq-section">
+            <h2>常见问题</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>如何与我合作？</h3>
+                    <p>您可以通过邮件或QQ联系我，详细描述您的需求和想法，我会在收到消息后尽快回复并商讨合作细节。</p>
+                </div>
+                <div class="faq-item">
+                    <h3>响应时间是多久？</h3>
+                    <p>通常我会在1-2个工作日内回复您的消息。如果是紧急事项，建议通过QQ或微信联系我。</p>
+                </div>
+                <div class="faq-item">
+                    <h3>可以提供技术咨询吗？</h3>
+                    <p>当然可以！我很乐意解答您关于Web开发、Python编程等方面的问题，也欢迎技术交流。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        document.getElementById('messageForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // 显示加载状态
+            const submitBtn = this.querySelector('.submit-btn');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = '发送中...';
+            submitBtn.disabled = true;
+
+            // 准备发送的数据
+            const templateParams = {
+                from_name: document.getElementById('name').value || '匿名访客',
+                from_email: document.getElementById('email').value,
+                subject: document.getElementById('subject').value,
+                message: document.getElementById('message').value,
+                to_email: '2265130378@qq.com'
+            };
+
+            // 发送邮件
+            emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
+                .then(function(response) {
+                    alert('消息已发送！我会尽快回复您。');
+                    e.target.reset();
+                }, function(error) {
+                    alert('发送失败，请稍后重试或直接通过其他方式联系我。');
+                    console.error('发送失败:', error);
+                })
+                .finally(function() {
+                    // 恢复按钮状态
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                });
+        });
+    </script>
+</body>
+</html> 

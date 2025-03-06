@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>方柏权的个人博客</title>
+    <link rel="stylesheet" href="../src/index.css">
+    <link rel="stylesheet" href="../src/css/home.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css ">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <header>
+        <nav class="navbar">
+            
+            <div class="nav-right">
+                <a href="index.html" class="active">主页</a>
+                <a href="projects.html">项目</a>
+                <a href="experience.html">经验</a>
+                <a href="contact.html">联系</a>
+                <a href="blog.html">博客</a>
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="ri-sun-line"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 英雄区域 -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>欢迎来到小方的个人空间</h1>
+                <p class="subtitle">一个热爱编程、分享技术的开发者天地</p>
+                <div class="cta-buttons">
+                    <a href="#latest-posts" class="primary-btn">最新文章</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 主要内容区 -->
+    <main class="home-main">
+        <!-- 文章区域 -->
+        <div class="content-area">
+            <!-- 最新文章列表 -->
+            <section class="latest-posts" id="latest-posts">
+                <h2>最新文章</h2>
+                <div class="posts-grid">
+                    <!-- Python基础 -->
+                    <div class="post-card">
+                        <img src="../imgs/python_01.png" alt="Python基础">
+                        <div class="post-content">
+                            <span class="post-category">Python</span>
+                            <h3>Python基础入门</h3>
+                            <p>零基础快速入门Python编程，掌握基本语法和编程思维，开启编程之旅。</p>
+                            <div class="post-meta">
+                                <span><i class="ri-code-s-slash-line"></i> 入门</span>
+                                <span><i class="ri-book-line"></i> 基础</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Python高级 -->
+                    <div class="post-card">
+                        <img src="../imgs/python_02.png" alt="Python高级">
+                        <div class="post-content">
+                            <span class="post-category">Python</span>
+                            <h3>Python高级教程</h3>
+                            <p>深入Python核心，解锁高级编程技巧与特性，提升编程实力。</p>
+                            <div class="post-meta">
+                                <span><i class="ri-time-line"></i> 系列课程</span>
+                                <span><i class="ri-fire-line"></i> 进阶</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- MySQL数据库 -->
+                    <div class="post-card">
+                        <img src="../imgs/mysql_01.png" alt="MySQL数据库">
+                        <div class="post-content">
+                            <span class="post-category">数据库</span>
+                            <h3>MySQL精通指南</h3>
+                            <p>掌握MySQL数据库管理，高效存储与检索数据，为应用提供坚实后盾。</p>
+                            <div class="post-meta">
+                                <span><i class="ri-database-2-line"></i> 实战</span>
+                                <span><i class="ri-star-line"></i> 必学</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Web前端 -->
+                    <div class="post-card">
+                        <img src="../imgs/wed_01.png" alt="Web前端">
+                        <div class="post-content">
+                            <span class="post-category">前端开发</span>
+                            <h3>Web前端开发实战</h3>
+                            <p>构建精美用户界面，精通HTML/CSS/JavaScript，打造卓越用户体验。</p>
+                            <div class="post-meta">
+                                <span><i class="ri-code-line"></i> 综合</span>
+                                <span><i class="ri-palette-line"></i> 设计</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 网站开发 -->
+                    <div class="post-card">
+                        <img src="../imgs/wangzhan_01.png" alt="网站开发">
+                        <div class="post-content">
+                            <span class="post-category">后端开发</span>
+                            <h3>Django/Flask开发教程</h3>
+                            <p>使用Django/Flask等框架，快速搭建功能丰富的网站，实现创意与想法。</p>
+                            <div class="post-meta">
+                                <span><i class="ri-server-line"></i> 框架</span>
+                                <span><i class="ri-rocket-line"></i> 高效</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 爬虫 -->
+                    <div class="post-card">
+                        <img src="../imgs/pachong_01.png" alt="网络爬虫">
+                        <div class="post-content">
+                            <span class="post-category">爬虫技术</span>
+                            <h3>Python爬虫进阶</h3>
+                            <p>解锁网络数据抓取技能，学会逆向，运用Selenium等工具与框架，轻松获取所需信息。</p>
+                            <div class="post-meta">
+                                <span><i class="ri-spider-line"></i> 自动化</span>
+                                <span><i class="ri-robot-line"></i> 智能</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 数据分析 -->
+                    <div class="post-card">
+                        <img src="../imgs/shujufenxi_01.png" alt="数据分析">
+                        <div class="post-content">
+                            <span class="post-category">数据分析</span>
+                            <h3>Python数据分析</h3>
+                            <p>运用Python进行数据分析，挖掘数据背后的价值，为决策提供有力支持。</p>
+                            <div class="post-meta">
+                                <span><i class="ri-line-chart-line"></i> 分析</span>
+                                <span><i class="ri-pie-chart-line"></i> 可视化</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        

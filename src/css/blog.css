@@ -1,0 +1,264 @@
+.blog-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: calc(var(--nav-height) + 2rem) 2rem 2rem;
+}
+
+.blog-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.section-title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(45deg, var(--accent-color), #fff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.intro-text {
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.blog-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+}
+
+/* 主要内容区样式 */
+.blog-content {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 1rem;
+    backdrop-filter: blur(10px);
+}
+
+.content-intro {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+/* 博客分类样式 */
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin: 1.5rem 0 3rem;
+}
+
+.category-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1.5rem;
+    border-radius: 0.8rem;
+    transition: transform 0.3s;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+}
+
+.category-card i {
+    font-size: 2rem;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+.category-card h4 {
+    color: var(--text-primary);
+    margin-bottom: 0.8rem;
+}
+
+.category-card p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* 未来计划样式 */
+.plans-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.plan-item {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1.5rem;
+    border-radius: 0.8rem;
+}
+
+.plan-item h4 {
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+.plan-item p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* 感谢支持样式 */
+.appreciation {
+    text-align: center;
+    margin-top: 3rem;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 1rem;
+}
+
+.support-options {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.support-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    background: var(--accent-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 2rem;
+    transition: opacity 0.3s;
+}
+
+.support-btn:hover {
+    opacity: 0.9;
+}
+
+/* 侧边栏样式 */
+.author-card {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    margin-bottom: 2rem;
+}
+
+.author-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+    border: 4px solid var(--accent-color);
+}
+
+.author-stats {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    display: block;
+    font-size: 1.5rem;
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+.stat-label {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.subscribe-card {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 1rem;
+    backdrop-filter: blur(10px);
+    margin-bottom: 2rem;
+}
+
+.subscribe-form {
+    margin-top: 1rem;
+}
+
+.subscribe-form input {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 0.5rem;
+    color: var(--text-primary);
+}
+
+.subscribe-form button {
+    width: 100%;
+    padding: 0.8rem;
+    background: var(--accent-color);
+    border: none;
+    border-radius: 0.5rem;
+    color: white;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.subscribe-form button:hover {
+    opacity: 0.9;
+}
+
+.resources-card {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 1rem;
+    backdrop-filter: blur(10px);
+}
+
+.resource-list {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.resource-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+.resource-list i {
+    color: var(--accent-color);
+}
+
+.resource-list a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.resource-list a:hover {
+    color: var(--accent-color);
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .blog-container {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title {
+        font-size: 2.5rem;
+    }
+
+    .support-options {
+        flex-direction: column;
+    }
+} 

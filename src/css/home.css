@@ -1,0 +1,208 @@
+/* 英雄区域样式 */
+.hero {
+    height: calc(100vh - var(--nav-height));
+    margin-top: var(--nav-height);
+    background: transparent;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(10, 25, 47, 0.3);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    text-align: center;
+}
+
+.hero-text h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(45deg, var(--accent-color), #fff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-text .subtitle {
+    font-size: 1.5rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+}
+
+/* 主要内容区样式 */
+.home-main {
+    max-width: 1400px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+    display: flex;
+    gap: 4rem;
+    align-items: flex-start;
+}
+
+/* 文章区域样式 */
+.content-area {
+    flex: 1;
+    max-width: 800px;
+}
+
+/* 文章网格布局 */
+.posts-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.post-card {
+    background: var(--card-bg);
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.post-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.post-card img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.post-content {
+    flex: 1;
+    padding: 2rem;
+}
+
+.post-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    color: var(--text-secondary);
+}
+
+.post-category {
+    display: inline-block;
+    padding: 0.4rem 1rem;
+    background: var(--accent-color);
+    color: white;
+    border-radius: 2rem;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.post-content h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.post-meta {
+    display: flex;
+    justify-content: space-between;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.post-meta span {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* 确保文章卡片有足够的上边距 */
+.content-area {
+    margin-top: 2rem;
+}
+
+.latest-posts {
+    margin-bottom: 4rem;
+    padding-top: 2rem;
+}
+
+/* 按钮样式 */
+.primary-btn {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background: var(--accent-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 2rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+    border: 2px solid var(--accent-color);
+}
+
+.primary-btn:hover {
+    background: transparent;
+    color: var(--accent-color);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
+}
+
+/* 调整按钮容器的样式 */
+.cta-buttons {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+/* 响应式调整 */
+@media (max-width: 1200px) {
+    .posts-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .home-main {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        transform: none;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .posts-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .post-card {
+        flex-direction: column;
+    }
+
+    .post-card img {
+        width: 100%;
+        height: 200px;
+    }
+
+    .post-content {
+        padding: 1.5rem;
+    }
+}

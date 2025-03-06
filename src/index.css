@@ -1,0 +1,350 @@
+:root {
+    --primary-bg: #0a192f;
+    --card-bg: rgba(10, 25, 47, 0.85);
+    --text-primary: #ffffff;
+    --text-secondary: #8892b0;
+    --accent-color: #ff6b6b;
+    --nav-height: 70px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: var(--primary-bg);
+    color: var(--text-primary);
+    min-height: 100vh;
+    background-image: url('../imgs/01.webp');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* 导航栏样式 */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: var(--nav-height);
+    background: rgba(10, 25, 47, 0.95);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2rem;
+    z-index: 1000;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.nav-logo {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.page-title {
+    color: var(--text-primary);
+    font-size: 1.2rem;
+}
+
+.nav-right {
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+}
+
+.nav-right a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.3s;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+}
+
+.nav-right a:hover,
+.nav-right a.active {
+    color: var(--accent-color);
+}
+
+/* 主题切换按钮 */
+.theme-toggle {
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    margin-left: 2rem;
+}
+
+/* 加载动画样式 */
+.loading-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--primary-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 3px solid var(--text-secondary);
+    border-top-color: var(--accent-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* 项目页面布局 */
+.portfolio-page {
+    padding-top: var(--nav-height);
+    min-height: 100vh;
+    display: flex;
+    gap: 2rem;
+    padding: calc(var(--nav-height) + 2rem) 2rem 2rem;
+}
+
+/* 个��信息卡片样式 */
+.profile-card {
+    background: var(--card-bg);
+    backdrop-filter: blur(10px);
+    padding: 2rem 1.5rem;
+    border-radius: 1rem;
+    width: 350px;
+    height: 800px;
+    position: sticky;
+    top: calc(var(--nav-height) + 2rem);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.avatar-container {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 1.5rem;
+}
+
+.avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--accent-color);
+    box-shadow: 0 0 20px rgba(255, 107, 107, 0.3);
+}
+
+.profile-card h1 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+}
+
+.motto {
+    color: var(--text-secondary);
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.social-links a {
+    color: var(--text-secondary);
+    font-size: 1.5rem;
+    transition: all 0.3s;
+    padding: 0.3rem;
+}
+
+.social-links a:hover {
+    color: var(--accent-color);
+    transform: translateY(-3px);
+}
+
+.info-list {
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.info-item {
+    padding: 0.6rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.95rem;
+}
+
+.info-item .label {
+    color: var(--text-primary);
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.contact-btn {
+    width: 100%;
+    padding: 0.8rem;
+    background: var(--accent-color);
+    border: none;
+    border-radius: 0.5rem;
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 1rem;
+}
+
+.contact-btn:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+}
+
+/* 项目展示区样式 */
+.portfolio-section {
+    flex: 1;
+    background: transparent;
+    backdrop-filter: blur(5px);
+    border-radius: 1rem;
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.portfolio-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-title {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(45deg, var(--accent-color), #fff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+    font-size: 2rem;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+}
+
+.view-more {
+    padding: 0.8rem 2rem;
+    background: transparent;
+    border: 2px solid var(--accent-color);
+    color: var(--accent-color);
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.view-more:hover {
+    background: var(--accent-color);
+    color: var(--primary-bg);
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.project-card {
+    background: var(--card-bg);
+    backdrop-filter: blur(10px);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    transition: transform 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-info {
+    padding: 1.5rem;
+}
+
+.project-info h3 {
+    margin-bottom: 0.5rem;
+    color: var(--accent-color);
+}
+
+.project-info p {
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+}
+
+.tech-stack {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.tech-stack span {
+    padding: 0.3rem 0.8rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 1rem;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+/* 响应式设计 */
+@media (max-width: 1024px) {
+    .portfolio-page {
+        flex-direction: column;
+    }
+
+    .profile-card {
+        width: 100%;
+        position: static;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-right {
+        display: none;
+    }
+}

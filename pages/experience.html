@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人简历 - 经验分享</title>
+    <link rel="stylesheet" href="../src/index.css">
+    <link rel="stylesheet" href="../src/css/experience.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <header>
+        <nav class="navbar">
+            <div class="nav-right">
+                <a href="index.html">主页</a>
+                <a href="projects.html">项目</a>
+                <a href="experience.html" class="active">经验</a>
+                <a href="contact.html">联系</a>
+                <a href="blog.html">博客</a>
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="ri-sun-line"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 主要内容区 -->
+    <main class="experience-page">
+        <!-- 时间轴部分 -->
+        <section class="timeline-section">
+            <h2 class="section-title">学习历程</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Python基础到进阶</h3>
+                        <span class="timeline-date">2024.03 - 2024.08</span>
+                        <p>从零开始学习Python，掌握基础语法、数据结构、面向对象编程等核心概念。通过实践项目深化理解，包括文件处理、数据分析等实用技能。</p>
+                        <div class="skills-tag">
+                            <span>Python基础</span>
+                            <span>面向对象</span>
+                            <span>算法思维</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Web开发之路</h3>
+                        <span class="timeline-date">2024.08 - 2024.12</span>
+                        <p>系统学习Web开发技术栈，包括HTML5、CSS3、JavaScript等前端技术，以及Django框架进行后端开发。完成多个实战项目，建立完整的Web开发技能体系。</p>
+                        <div class="skills-tag">
+                            <span>HTML/CSS</span>
+                            <span>JavaScript</span>
+                            <span>Django</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>数据库精进</h3>
+                        <span class="timeline-date">2024.12 - 2025.03</span>
+                        <p>深入学习MySQL数据库，掌握数据库设计、优化和管理技能。实践中运用事务处理、索引优化等进阶特性，提升数据处理能力。</p>
+                        <div class="skills-tag">
+                            <span>MySQL</span>
+                            <span>数据库设计</span>
+                            <span>性能优化</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>爬虫技术探索</h3>
+                        <span class="timeline-date">2025.03 - 2025.06</span>
+                        <p>深入研究网络爬虫技术，掌握Selenium、Scrapy等主流爬虫框架。开发自动化数据采集工具，实现高效的信息获取和处理。</p>
+                        <div class="skills-tag">
+                            <span>Selenium</span>
+                            <span>Scrapy</span>
+                            <span>数据采集</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>数据分析与可视化</h3>
+                        <span class="timeline-date">2025.06 - 2025.09</span>
+                        <p>学习数据分析技术，使用pandas、numpy等库进行数据处理，运用matplotlib、echarts等工具进行数据可视化展示。</p>
+                        <div class="skills-tag">
+                            <span>数据分析</span>
+                            <span>可视化</span>
+                            <span>商业智能</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 技能卡片部分 -->
+        <section class="skills-section">
+            <h2 class="section-title">技术栈</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <i class="ri-code-s-slash-line"></i>
+                    <h3>编程语言</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <span>Python</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>JavaScript</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <i class="ri-database-2-line"></i>
+                    <h3>数据库</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <span>MySQL</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 88%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>SQLite</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 82%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <i class="ri-window-line"></i>
+                    <h3>框架</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <span>Django</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>Flask</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <i class="ri-tools-line"></i>
+                    <h3>开发工具</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <span>Git</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span>Docker</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 70%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 项目经验部分 -->
+        <section class="projects-section">
+            <h2 class="section-title">项目经验</h2>
+            <div class="projects-grid">
+                <div class="project-experience">
+                    <div class

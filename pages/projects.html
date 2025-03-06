@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人简历 - 项目展示</title>
+    <link rel="stylesheet" href="../src/index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css">
+</head>
+<body>
+    <!-- 加载指示器 -->
+    <div class="loading-container" id="loading">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <!-- 导航栏 -->
+    <header>
+        <nav class="navbar">
+           
+            <div class="nav-right">
+                <a href="index.html">主页</a>
+                <a href="projects.html" class="active">项目</a>
+                <a href="experience.html">经验</a>
+                <a href="contact.html">联系</a>
+                <a href="blog.html">博客</a>
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="ri-sun-line"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 主要内容区 -->
+    <main class="portfolio-page">
+        <!-- 个人信息卡片 -->
+        <aside class="profile-card">
+            <div class="avatar-container">
+                <img src="../imgs/03.jpg" alt="头像" class="avatar">
+            </div>
+            <h1>小方的个人简历</h1>
+            <p class="motto">其实，我的理想是世界和平！</p>
+            
+            <div class="social-links">
+                <a href="#"><i class="ri-github-fill"></i></a>
+                <a href="#"><i class="ri-mail-fill"></i></a>
+                <a href="#"><i class="ri-wechat-fill"></i></a>
+                <a href="#"><i class="ri-qq-fill"></i></a>
+            </div>
+
+            <div class="info-list">
+                <div class="info-item">
+                    <span class="label">就读院校：</span>
+                    <span>河南工业大学</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">所在城市：</span>
+                    <span>河南 郑州</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">年级：</span>
+                    <span>2022届</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">学号：</span>
+                    <span>221040600215</span>
+                </div>
+            </div>
+
+            <button class="contact-btn">联系我</button>
+        </aside>
+
+        <!-- 项目展示区 -->
+        <section class="portfolio-section">
+            <div class="portfolio-header">
+                <h2 class="section-title">PORTFOLIO!</h2>
+                <p class="subtitle">Great minds have purpose</p>
+                <button class="view-more">了解一下这些项目吧</button>
+            </div>
+
+            <div class="project-grid">
+                <!-- 项目卡片1 -->
+                <div class="project-card">
+                    <img src="../imgs/04.png" alt="项目1">
+                    <div class="project-info">
+                        <h3>河南工业大学学生管理系统</h3>
+                        <p>基于Django的现代化学生信息管理平台</p>
+                        <div class="tech-stack">
+                            <span>Python</span>
+                            <span>Django</span>
+                            <span>MySQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 项目卡片2 -->
+                <div class="project-card">
+                    <img src="../imgs/05.png" alt="项目2">
+                    <div class="project-info">
+                        <h3>郑州特产电商平台</h3>
+                        <p>展示和销售郑州本地特色产品的网络平台</p>
+                        <div class="tech-stack">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 项目卡片3 -->
+                <div class="project-card">
+                    <img src="../imgs/06.png" alt="项目3">
+                    <div class="project-info">
+                        <h3>郑州旅游导览APP</h3>
+                        <p>为游客提供郑州景点介绍和路线规划的移动应用</p>
+                        <div class="tech-stack">
+                            <span>Android</span>
+                            <span>Java</span>
+                            <span>SQLite</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 项目卡片4 -->
+                <div class="project-card">
+                    <img src="../imgs/07.png" alt="项目4">
+                    <div class="project-info">
+                        <h3>个人技术博客</h3>
+                        <p>分享学习经验和技术见解的个人网站</p>
+                        <div class="tech-stack">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        window.addEventListener('load', function() {
+            document.getElementById('loading').style.display = 'none';
+            document.body.style.overflow = 'visible';
+        });
+    </script>
+</body>
+</html> 

@@ -1,0 +1,220 @@
+:root {
+    --primary-bg: #0a192f;
+    --card-bg: rgba(10, 25, 47, 0.85);
+    --text-primary: #ffffff;
+    --text-secondary: #8892b0;
+    --accent-color: #ff6b6b;
+    --nav-height: 70px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: var(--primary-bg);
+    color: var(--text-primary);
+    min-height: 100vh;
+    background-image: url('../../imgs/01.webp'); /* 修改背景图路径 */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* 项目展示区样式 */
+.portfolio-section {
+    flex: 1;
+    max-width: 900px;
+    background: transparent;
+    backdrop-filter: blur(5px);
+    border-radius: 1rem;
+    padding: 2rem 1rem;
+    margin-right: 2rem;
+}
+
+.portfolio-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(45deg, var(--accent-color), #fff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 10px rgba(255, 107, 107, 0.3);
+}
+
+.subtitle {
+    font-size: 1.8rem;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.view-more {
+    padding: 0.6rem 1.8rem;
+    background: transparent;
+    border: 2px solid var(--accent-color);
+    color: var(--accent-color);
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-bottom: 1.5rem;
+}
+
+.view-more:hover {
+    background: var(--accent-color);
+    color: var(--primary-bg);
+}
+
+/* 项网格布局 */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding: 0 1rem;
+}
+
+/* 项目卡片样式 */
+.project-card {
+    background: var(--card-bg);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    aspect-ratio: 4/3;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.project-info {
+    padding: 1.2rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project-info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+    color: var(--accent-color);
+}
+
+.project-info p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 1.2rem;
+    color: var(--text-secondary);
+}
+
+.tech-stack {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.tech-stack span {
+    padding: 0.3rem 0.8rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+/* 头像社交链接样式 */
+.avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--accent-color);
+}
+
+.social-links a {
+    color: var(--text-secondary);
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--accent-color);
+}
+
+/* 联系按钮样式 */
+.contact-btn {
+    width: 100%;
+    padding: 0.8rem;
+    background: var(--accent-color);
+    border: none;
+    border-radius: 0.5rem;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.contact-btn:hover {
+    opacity: 0.9;
+}
+
+/* 调整个人信息卡片样式 */
+.profile-card {
+    background: var(--card-bg);
+    backdrop-filter: blur(10px);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    width: 350px;
+    min-height: 370px;  /* 从520px减少到370px */
+    position: sticky;
+    top: calc(var(--nav-height) + 1rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    transform: translateX(250px);
+}
+
+/* 调整内部元素间距，使内容更紧凑 */
+.avatar-container {
+    width: 90px;  /* 减小头像尺寸 */
+    height: 90px;
+    margin: 0 auto 0.8rem;
+}
+
+.profile-card h1 {
+    font-size: 1.3rem;
+    margin-bottom: 0.6rem;
+}
+
+.motto {
+    margin-bottom: 0.8rem;
+}
+
+.social-links {
+    margin-bottom: 0.8rem;
+}
+
+.info-list {
+    margin-bottom: 0.8rem;
+}
