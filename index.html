@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录页面</title>
+    <link rel="stylesheet" href="./src/css/login.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2>用户登录</h2>
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="username">用户名：</label>
+                <input type="text" id="username" name="username" required placeholder="请输入用户名">
+            </div>
+            <div class="form-group">
+                <label for="password">密码：</label>
+                <input type="password" id="password" name="password" required placeholder="请输入密码">
+            </div>
+            <div class="form-group">
+                <label for="captcha">验证码：</label>
+                <input type="text" id="captcha" name="captcha" required placeholder="请输入验证码">
+                <img src="" alt="验证码" class="captcha-img" id="captchaImg" onclick="refreshCaptcha()">
+            </div>
+            <button type="submit" class="submit-btn">登录</button>
+        </form>
+    </div>
+
+    <script src="./src/login.js"></script>
+</body>
+</html>
